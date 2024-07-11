@@ -1,1 +1,3 @@
+# Este comando seleciona todas as colunas da tabela escolhida
+
 SELECT * FROM LIGGA.TB_FAT_BASE_LIGGA

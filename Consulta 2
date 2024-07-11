@@ -1,1 +1,20 @@
-
+SELECT DISTINCT ON (cis.circuito)
+    cis.circuito,
+    cis.data_criacao_circuito,
+    cis.status,
+    cis.tipo_pessoa,
+    cis.cpf_cnpj,
+    cis.pessoa,
+    cis.nome_fantasia,
+    cis.produto_final,
+    cis.logradouro_ponta_a,
+    cis.numero_ponta_a,
+    cis.complemento_a,
+    cis.cidade1,
+    cis.bairro1,
+    cis.cep_ponta_a
+    
+FROM cis.tb_fat_cis_relatorio_planta_contratos AS cis
+WHERE cis.data_criacao_circuito >= '2010-01-01'
+ORDER BY cis.circuito, cis.data_criacao_circuito DESC
+LIMIT 148000
